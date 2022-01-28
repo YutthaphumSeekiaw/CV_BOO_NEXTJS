@@ -25,7 +25,7 @@ function Profile() {
             margin: 0 auto;
         }
         .banner-bg{
-            height: 600px;
+            height: 630px;
             background: transparent;
             background-size: cover;
             overflow: hidden;
@@ -34,7 +34,7 @@ function Profile() {
             display: flex;
             align-items: center;
             justify-content: center;
-            height: 600px;
+            height: 630px;
         }
         .banner-text{
             margin-top: 300px;
