@@ -42,6 +42,9 @@ function Skills() {
             .content-con{
                 flex-direction: column;
             }
+            .content-l{
+                padding: 0 1rem;
+            }
             .content-con:nth-child(2) .content-r{
               order: 1;
             }
