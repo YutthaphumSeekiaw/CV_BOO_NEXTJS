@@ -19,6 +19,7 @@ function header() {
     setClick(false)
   }
 
+  // eslint-disable-next-line react-hooks/rules-of-hooks
   const { t, i18n } = useTranslation();
 
   const handleClickLang =(lang) => {
