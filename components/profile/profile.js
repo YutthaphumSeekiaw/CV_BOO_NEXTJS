@@ -1,5 +1,6 @@
 import React from 'react';
 import { useTranslation } from 'next-i18next'
+import {FaGithub,FaGitlab,FaLine} from 'react-icons/fa';
 
 function Profile() {
 
@@ -49,6 +50,15 @@ function Profile() {
             border: 2px solid #fff;
             color: #fff;
         }
+        .banner-text h1{
+            font-size: xxx-large;
+            color: darkgoldenrod;
+            cursor:pointer;
+        }
+        .banner-text h1 a{
+            margin-top:30px;
+            padding: 0 1rem;
+        }
         
         @media screen and (max-width:480px) {
             .banner-text{
@@ -59,10 +69,9 @@ function Profile() {
           `}
       </style>
       <div className='contrainner'>
-          <div className='banner-con'>
-              
+          <div className='banner-con'>       
               <div className='banner-text'>
-              <h2>{t('profile.title')}</h2>
+                 <h2>{t('profile.title')}</h2>
                   <p>
                   {t('profile.person')}
                   </p>
@@ -76,7 +85,19 @@ function Profile() {
                   {t('profile.email')}
                   </p>
                   <a href='#' className='banner-btn'>{t('profile.btn')}</a>
-              </div>
+                  <h1>
+                    <a href='https://github.com/YutthaphumSeekiaw?tab=repositories'>
+                    <FaGithub></FaGithub>
+                    {/* <BsGithub/> */}
+                    </a>
+                    <a href='http://line.me/ti/p/~yutthaphumbo'>
+                    <FaLine/>
+                    </a>
+                    <a href='https://gitlab.com/yutthaphum'>
+                    <FaGitlab/>
+                    </a>
+                  </h1>
+            </div>      
           </div>
       </div>
   </div>;

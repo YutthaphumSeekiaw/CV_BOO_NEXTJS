@@ -52,6 +52,9 @@ function education() {
                     cursor:pointer;
                     margin-top:50px;
                 }
+                .edu-text h1 a{
+                    margin-top:60px;
+                }
 
       `}</style>
 
@@ -69,9 +72,9 @@ function education() {
                    2007-2010 - Nampong Suksa School, Khon Kaen [Science-Mathematics program GPA 2.41]                        
                  </p>
                  <h1>
-                 <Button>
+                 <a>
                  <FaArrowCircleUp onClick={scrollToTop}/>
-                 </Button>
+                 </a>
                  </h1>
                  
              </div>
