@@ -5,6 +5,8 @@ import profilepic from "../../public/profile.jpg"
 import Image from 'next/image';
 import Style from './header.module.css'
 
+import { useTranslation } from 'next-i18next'
+
 import { Link, Button, Element, Events, scrollToTop,animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
 
 function header() {
@@ -17,11 +19,11 @@ function header() {
     setClick(false)
   }
 
-//   const { t, i18n } = useTranslation();
+  const { t, i18n } = useTranslation();
 
-//   const handleClickLang =(lang) => {
-//     i18n.changeLanguage(lang);
-//   }
+  const handleClickLang =(lang) => {
+    i18n.changeLanguage(lang);
+  }
   return (
 
     <div className="header">
@@ -34,6 +36,7 @@ function header() {
               .header{
                   background: transparent;
                   height: 80px;
+                  z-index: 3;
               }
 
               .header-con{
@@ -113,19 +116,24 @@ function header() {
                       opacity: 0;
                       flex-direction: column;
                       top: 64px;
+                      z-index: 2;
                       transition: 0.5s ease;
                   }
                   .menu.active{
                       background: rgb(8, 5, 31);;
                       left: 0;
                       opacity: 1;
-                      z-index: 1;
+                      z-index: 2;
                       align-content: center;
                       transition: 0.5s ease;
                       padding-left: 0;
                   }
                   .menu li{
                       padding-right: 0;
+                      z-index: 2;
+                  }
+                  .menu li a{
+                    z-index: 2;
                   }
                   .menu-link{
                       display: flex;
@@ -133,6 +141,7 @@ function header() {
                       justify-content: center;
                       height: 10vw;
                       padding: 10px 0;
+                      z-index: 2;
                   }
 
               }
@@ -144,37 +153,24 @@ function header() {
             <a href='#'>CV <FiActivity/></a>
           </div>
           <ul className={click?"menu active":"menu"}>
-          <li className='menu-link' onClick={closeMobileMenu}>
-               {/* <Link  to="banner" spy={true} smooth={true} offset={50} duration={500} href='#banner' onClick={closeMobileMenu}>Home</Link> */}
-               <a href='#profile' onClick={scrollToTop} spy={true} smooth={true} offset={50} duration={500}>Profile</a>
+          <li className='menu-link' onClick={scrollToTop}>
+               <Link  to="profile" spy="true" smooth="true" offset={50} duration={700} href='#profile' onClick={closeMobileMenu}><a>{t('header.home')}</a></Link>
             </li>
             <li className='menu-link' onClick={closeMobileMenu}>
-            <a href='#skills' onClick={scrollToTop} spy={true} smooth={true} offset={50} duration={500}>Skills</a>
-               {/* <Link  to="content" spy={true} smooth={true} offset={50} duration={500} href='#content' onClick={closeMobileMenu}>Skill</Link> */}
+               <Link  to="skills" onClick={closeMobileMenu} spy="true" smooth="true" offset={50} duration={700} href='#skills'><a>{t('header.skills')}</a></Link>
             </li>
             <li className='menu-link' onClick={closeMobileMenu}>
-            <a href='#skills' onClick={scrollToTop} spy={true} smooth={true} offset={50} duration={500}>Experience</a>
-               {/* <Link  to="content" spy={true} smooth={true} offset={50} duration={500} href='#content' onClick={closeMobileMenu}>Skill</Link> */}
+              <Link href='#skills' onClick={closeMobileMenu} spy="true" smooth="true" offset={50} duration={700}><a>{t('header.experiences')}</a></Link>
             </li>
             <li className='menu-link' onClick={closeMobileMenu}>
-            <a href='#skills' onClick={scrollToTop} spy={true} smooth={true} offset={50} duration={500}>Education</a>
-               {/* <Link  to="content" spy={true} smooth={true} offset={50} duration={500} href='#content' onClick={closeMobileMenu}>Skill</Link> */}
+             <Link href='#skills' onClick={closeMobileMenu} spy="true" smooth="true" offset={50} duration={700}><a>{t('header.education')}</a></Link>
             </li>
-            {/* <li className='menu-link' onClick={closeMobileMenu}>
-               <Link to="calltoaction" spy={true} smooth={true} offset={50} duration={500} href='#calltoaction' onClick={closeMobileMenu}>{t('header.contract')}</Link>
-            </li>
-            <li className='menu-link' onClick={closeMobileMenu}>
-               <button onClick={() => handleClickLang('en')}>en</button>
-               <button onClick={() => handleClickLang('th')}>th</button>
-            </li> */}
-            {/* <li className='menu-link' onClick={closeMobileMenu}>
-               <a href='#'>Blog</a>
-            </li> */}
+
              <li className='menu-link' onClick={closeMobileMenu}>
-            <a href='#skills' onClick={scrollToTop} spy={true} smooth={true} offset={50} duration={500}>EN</a>
-            <a>  |  </a>
-            <a href='#skills' onClick={scrollToTop} spy={true} smooth={true} offset={50} duration={500}>TH</a>
-                </li>
+                <a href='/en'  style={{cursor:"pointer"}}>EN</a>
+                <a>  |  </a>
+                <a href='/th' style={{cursor:"pointer"}}>TH</a>
+             </li>
             
           </ul>
           <div className='mobile-menu' onClick={handleClick}>
