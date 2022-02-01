@@ -6,6 +6,9 @@ import * as THREE from "three"
 import Header from '../components/header/header'
 import Profile from '../components/profile/profile'
 import Skills from '../components/skill/skill'
+import Experiences from '../components/experiences/experiences'
+import Education from '../components/education/education'
+import Footer from '../components/footer/footer'
 
 import ScrollButton from '../components/buttonscoll/ScrollButton';
 import { Content, Heading } from '../components/buttonscoll/Styles';
@@ -139,12 +142,13 @@ export default function Home() {
       <StickyNav length='40'><Header></Header></StickyNav> */}
       <Profile></Profile>
       <Skills></Skills>
+      <Experiences></Experiences>
+      <Education></Education>
+      <Footer></Footer>
       
-
-     
-  
     </div>
-
+    
+    
     {/* <ScrollButton></ScrollButton> */}
     
 

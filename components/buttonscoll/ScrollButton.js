@@ -4,7 +4,8 @@ import { Button } from './Styles';
 
 const ScrollButton = () =>{
 
-const [visible, setVisible] = useState(false)
+const [visible, setVisible] = useState(true)
+const [scollh, setScollh] = useState(0)
 
 const toggleVisible = () => {
 	const scrolled = document.documentElement.scrollTop;
@@ -55,18 +56,19 @@ useEffect(() => {
     //   }
     // });
 	const scrolled = document.documentElement.scrollTop;
-	if (scrolled > 300){
+	setScollh(scrolled)
+	if (scollh > 300){
 	setVisible(true)
 	}
-	else if (scrolled <= 300){
+	else if (scollh <= 300){
 	setVisible(false)
 	}
-  }, []);
+  }, [scollh]);
 
 return (
 	<Button>
 	<FaArrowCircleUp onClick={scrollToTop}
-	style={{display: visible ? 'inline' : 'none'}} />
+	style={{display: visible ? 'inline' : 'inline'}} />
 	</Button>
 );
 }

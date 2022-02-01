@@ -10,91 +10,93 @@ function Skills() {
             margin: 0 auto;
         }
         .content-con{
+            margin: 1em 0;
             display: flex;
             justify-content: space-between;
         }
-        .content-con:first-child, .content-con:last-child{
-            padding: 5rem 0;
+        .content-text{
+            color: #fff;
+            text-align: center;
         }
-        .content-l img{
-            width: 100%;
-            border-radius: 10px;
-        
+        .skills-con{
+            display:grid;
+            grid-template-columns:repeat(2,1fr);
         }
-        .content-r{
-            padding: 2rem;
-            text-align: left;
+        .skills-item{
+          border: 2px solid #333;
+          padding: 2rem;
+          color:#fff;
+          margin: 0 1rem;
         }
-        .content-r h3{
-            color:#fff;
+        .skills-item:hover{
+            background: rgb(20,26,50);
         }
-        .content-r p{
-            color:#fff;
+        .skills-item h3{
+          text-align: center;
         }
-        .content-l h3{
-            color:#fff;
-        }
-        .content-l p{
-            color:#fff;
-        }
-        
+    
         @media screen and (max-width:480px) {
-            .content-con{
-                flex-direction: column;
+            .skills-con{
+                display:grid;
+                grid-template-columns:1fr;
             }
-            .content-l{
-                padding: 0 1rem;
-            }
-            .content-con:nth-child(2) .content-r{
-              order: 1;
-            }
-            .content-r h3{
-                color:#fff;
-            }
-            .content-r p{
-                color:#fff;
-            }
-            .content-l h3{
-                color:#fff;
-            }
-            .content-l p{
-                color:#fff;
+            .skills-item{
+                margin: 1rem;
             }
         }
 
           `
       }</style>
-      <section className='content-con'>
-          <div className='content-l'>
-             <img src='https://images.unsplash.com/photo-1522252234503-e356532cafd5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1025&q=80' title='dev'></img> 
-          </div>
-          <div className='content-r'>
-              <h3>Some title 1</h3>
+      <div className='content-text'>
+          <h2>Skills</h2>
+      </div>
+      <section className='skills-con'>
+          <div className='skills-item'>
+              <h3>Font-end</h3>
+              <h4>Language</h4>
               <p>
-                  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestiae mollitia nam, excepturi quas corporis laboriosam perspiciatis autem nihil! Deleniti rerum nisi labore nostrum quisquam delectus facere soluta ab alias iusto?
+              - html<br></br>
+              - css<br></br>
+              - javascript<br></br>
+                - razor<br></br>
+                - jquery<br></br>
+              </p>
+              <h4>Framework and Build up</h4>
+              <p>
+              - reactjs<br></br> 
+              - nextjs<br></br>
+              - vuejs<br></br>
+              - nuxtjs<br></br>
+              - vite<br></br>
+              - asp.net<br></br>
               </p>
           </div>
-      </section>
-      <section className='content-con'>
-      <div className='content-r'>
-              <h3>Some title 2</h3>
-              <p>
-                  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestiae mollitia nam, excepturi quas corporis laboriosam perspiciatis autem nihil! Deleniti rerum nisi labore nostrum quisquam delectus facere soluta ab alias iusto?
+          <div className='skills-item'>
+              <h3>Back-end</h3>           
+              <h4>Language</h4>
+              <p>           
+              - C#<br></br>
               </p>
-          </div>
-          <div className='content-l'>
-             <img src='https://images.unsplash.com/photo-1522252234503-e356532cafd5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1025&q=80' title='dev'></img> 
-          </div>
-         
-      </section>
-      <section className='content-con'>
-          <div className='content-l'>
-             <img src='https://images.unsplash.com/photo-1522252234503-e356532cafd5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1025&q=80' title='dev'></img> 
-          </div>
-          <div className='content-r'>
-              <h3>Some title 3</h3>
-              <p>
-                  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestiae mollitia nam, excepturi quas corporis laboriosam perspiciatis autem nihil! Deleniti rerum nisi labore nostrum quisquam delectus facere soluta ab alias iusto?
+              <h4>Framework</h4>
+              <p>           
+              - .net<br></br>
+              - .net core<br></br>
+              </p>
+              <h4>Source Control</h4>
+              <p>           
+              - git<br></br>
+              - svn<br></br>
+              - github<br></br>
+              - gitlab<br></br>
+              </p>
+              <h4>Server</h4>
+              <p>                
+              - iis<br></br>
+              </p>
+              <h4>Database</h4>
+              <p>           
+              - sql server<br></br>
+              - oracle<br></br>
               </p>
           </div>
       </section>
