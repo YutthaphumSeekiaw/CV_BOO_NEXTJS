@@ -155,16 +155,16 @@ function header() {
           </div>
           <ul className={click?"menu active":"menu"}>
           <li className='menu-link' onClick={scrollToTop}>
-               <Link  to="profile" spy="true" smooth="true" offset={50} duration={700} href='#profile' onClick={closeMobileMenu}><a>{t('header.home')}</a></Link>
+               <Link  to="profile" spy="true" smooth="true" offset={50} duration={700} href='#profile' onClick={scrollToTop}><a>{t('header.home')}</a></Link>
             </li>
             <li className='menu-link' onClick={closeMobileMenu}>
                <Link  to="skills" onClick={closeMobileMenu} spy="true" smooth="true" offset={50} duration={700} href='#skills'><a>{t('header.skills')}</a></Link>
             </li>
             <li className='menu-link' onClick={closeMobileMenu}>
-              <Link href='#skills' onClick={closeMobileMenu} spy="true" smooth="true" offset={50} duration={700}><a>{t('header.experiences')}</a></Link>
+              <Link href='#experiences' to='experiences' onClick={closeMobileMenu} spy="true" smooth="true" offset={50} duration={700}><a>{t('header.experiences')}</a></Link>
             </li>
             <li className='menu-link' onClick={closeMobileMenu}>
-             <Link href='#skills' onClick={closeMobileMenu} spy="true" smooth="true" offset={50} duration={700}><a>{t('header.education')}</a></Link>
+             <Link href='#education' to='education' onClick={closeMobileMenu} spy="true" smooth="true" offset={50} duration={700}><a>{t('header.education')}</a></Link>
             </li>
 
              <li className='menu-link' onClick={closeMobileMenu}>

@@ -2,7 +2,7 @@ import React from 'react';
 // import './content.css'
 
 function Skills() {
-  return <div className='containner' id="skills">
+  return <div className='containner' id="experiences">
       <style jsx>{
           `
           .containner{
@@ -12,6 +12,7 @@ function Skills() {
         .content-text{
             color: #fff;
             text-align: center;
+            margin-top: 80px;
         }
         .content-con{
             display: flex;

@@ -17,6 +17,7 @@ function Skills() {
         .content-text{
             color: #fff;
             text-align: center;
+            margin-top:80px
         }
         .skills-con{
             display:grid;
@@ -27,9 +28,10 @@ function Skills() {
           padding: 2rem;
           color:#fff;
           margin: 0 1rem;
+          background: rgb(8,5,31);
         }
         .skills-item:hover{
-            background: rgb(20,26,50);
+            background: rgb(8,5,31);
         }
         .skills-item h3{
           text-align: center;
