@@ -1,5 +1,7 @@
 import React from 'react';
-// import './content.css'
+import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timeline-component';
+import 'react-vertical-timeline-component/style.min.css';
+import {FaArrowCircleUp} from 'react-icons/fa';
 
 function Skills() {
   return <div className='containner' id="experiences">
@@ -15,56 +17,13 @@ function Skills() {
             margin-top: 80px;
         }
         .content-con{
-            display: flex;
-            justify-content: space-between;
+            display: grid;
+            grid-template-columns:repeat(1,1fr);
         }
-        .content-con:first-child, .content-con:last-child{
-            padding: 5rem 0;
-        }
-        .content-l img{
-            width: 100%;
-            border-radius: 10px;
-        
-        }
-        .content-r{
-            padding: 2rem;
-            text-align: left;
-        }
-        .content-r h3{
-            color:#fff;
-        }
-        .content-r p{
-            color:#fff;
-        }
-        .content-l h3{
-            color:#fff;
-        }
-        .content-l p{
-            color:#fff;
-        }
+      
         
         @media screen and (max-width:480px) {
-            .content-con{
-                flex-direction: column;
-            }
-            .content-l{
-                padding: 0 1rem;
-            }
-            .content-con:nth-child(2) .content-r{
-              order: 1;
-            }
-            .content-r h3{
-                color:#fff;
-            }
-            .content-r p{
-                color:#fff;
-            }
-            .content-l h3{
-                color:#fff;
-            }
-            .content-l p{
-                color:#fff;
-            }
+
         }
 
           `
@@ -73,38 +32,99 @@ function Skills() {
           <h2>Experiences</h2>
       </div>
       <section className='content-con'>
-          <div className='content-l'>
-             <img src='https://images.unsplash.com/photo-1522252234503-e356532cafd5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1025&q=80' title='dev'></img> 
-          </div>
-          <div className='content-r'>
-              <h3>Some title 1</h3>
-              <p>
-                  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestiae mollitia nam, excepturi quas corporis laboriosam perspiciatis autem nihil! Deleniti rerum nisi labore nostrum quisquam delectus facere soluta ab alias iusto?
-              </p>
-          </div>
-      </section>
-      <section className='content-con'>
-      <div className='content-r'>
-              <h3>Some title 2</h3>
-              <p>
-                  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestiae mollitia nam, excepturi quas corporis laboriosam perspiciatis autem nihil! Deleniti rerum nisi labore nostrum quisquam delectus facere soluta ab alias iusto?
-              </p>
-          </div>
-          <div className='content-l'>
-             <img src='https://images.unsplash.com/photo-1522252234503-e356532cafd5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1025&q=80' title='dev'></img> 
-          </div>
-         
-      </section>
-      <section className='content-con'>
-          <div className='content-l'>
-             <img src='https://images.unsplash.com/photo-1522252234503-e356532cafd5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1025&q=80' title='dev'></img> 
-          </div>
-          <div className='content-r'>
-              <h3>Some title 3</h3>
-              <p>
-                  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestiae mollitia nam, excepturi quas corporis laboriosam perspiciatis autem nihil! Deleniti rerum nisi labore nostrum quisquam delectus facere soluta ab alias iusto?
-              </p>
-          </div>
+
+      <VerticalTimeline>
+        <VerticalTimelineElement
+            className="vertical-timeline-element--work"
+            contentStyle={{ background: 'rgb(8,5,31)', color: '#fff' }}
+            contentArrowStyle={{ borderRight: '7px solid  #fff' }}
+            date="May 2019 - present"
+            iconStyle={{ background: 'rgb(8,5,31)', color: '#fff' }}
+            icon={<FaArrowCircleUp />}
+        >
+            <h3 className="vertical-timeline-element-title">Outsource at SCG </h3>
+            <h4 className="vertical-timeline-element-subtitle">Role: Developer</h4>
+            <p>
+            Design database domain, Design Flow, Development new features, Fixed bug application and Maintain application, Build and deploy application, Work with Scrum 
+            </p>
+        </VerticalTimelineElement>
+        <VerticalTimelineElement
+            className="vertical-timeline-element--work"
+            contentStyle={{ background: 'rgb(8,5,31)', color: '#fff' }}
+            contentArrowStyle={{ borderRight: '7px solid  #fff' }}
+            date="May 2018 - May 2019"
+            iconStyle={{ background: 'rgb(8,5,31)', color: '#fff' }}
+            icon={<FaArrowCircleUp />}
+        >
+            <h3 className="vertical-timeline-element-title">Outsource at PTT Digital</h3>
+            <h4 className="vertical-timeline-element-subtitle">Role: Developer</h4>
+            <p>
+            Design database domain, Design Flow, Development new features, Fixed bug application and Maintain application, Build and deploy application, Work with Scrum 
+            </p>
+        </VerticalTimelineElement>
+        <VerticalTimelineElement
+            className="vertical-timeline-element--work"
+            contentStyle={{ background: 'rgb(8,5,31)', color: '#fff' }}
+            contentArrowStyle={{ borderRight: '7px solid  #fff' }}
+            date="January 2018 - May 2018"
+            iconStyle={{ background: 'rgb(8,5,31)', color: '#fff' }}
+            icon={<FaArrowCircleUp />}
+        >
+            <h3 className="vertical-timeline-element-title">Outsource at AYCAP Of Krungsri Bank</h3>
+            <h4 className="vertical-timeline-element-subtitle">Role: Developer</h4>
+            <p>
+             Development new features, Fixed bug application and Maintain application, Build and deploy application, Work with Scrum 
+            </p>
+        </VerticalTimelineElement>
+        <VerticalTimelineElement
+            className="vertical-timeline-element--work"
+            contentStyle={{ background: 'rgb(8,5,31)', color: '#fff' }}
+            contentArrowStyle={{ borderRight: '7px solid  #fff' }}
+            date="December 2016 - December 2017"
+            iconStyle={{ background: 'rgb(8,5,31)', color: '#fff' }}
+            icon={<FaArrowCircleUp />}
+        >
+            <h3 className="vertical-timeline-element-title">Outsource at Chanwanich co,.ltd</h3>
+            <h4 className="vertical-timeline-element-subtitle">Role: Developer</h4>
+            <p>
+             Development new features, Fixed bug application and Maintain application, Build and deploy application, Work with Scrum 
+            </p>
+        </VerticalTimelineElement>
+        <VerticalTimelineElement
+            className="vertical-timeline-element--work"
+            contentStyle={{ background: 'rgb(8,5,31)', color: '#fff' }}
+            contentArrowStyle={{ borderRight: '7px solid  #fff' }}
+            date="January 2014 - November 2016"
+            iconStyle={{ background: 'rgb(8,5,31)', color: '#fff' }}
+            icon={<FaArrowCircleUp />}
+        >
+            <h3 className="vertical-timeline-element-title">Outsource at AIG</h3>
+            <h4 className="vertical-timeline-element-subtitle">Role: Developer</h4>
+            <p>
+             Development new features, Fixed bug application and Maintain application, Build and deploy application 
+            </p>
+        </VerticalTimelineElement>
+        <VerticalTimelineElement
+            className="vertical-timeline-element--work"
+            contentStyle={{ background: 'rgb(8,5,31)', color: '#fff' }}
+            contentArrowStyle={{ borderRight: '7px solid  #fff' }}
+            date="November 2013 – December 2014"
+            iconStyle={{ background: 'rgb(8,5,31)', color: '#fff' }}
+            icon={<FaArrowCircleUp />}
+        >
+            <h3 className="vertical-timeline-element-title">Bangkok Medical Software</h3>
+            <h4 className="vertical-timeline-element-subtitle">Role: Programmer</h4>
+            <p>
+             Development new features, Fixed bug application and Maintain application, Build and deploy application, Maintain Systems 
+            </p>
+        </VerticalTimelineElement>
+
+        {/* <VerticalTimelineElement
+            iconStyle={{ background: 'rgb(16, 204, 82)', color: '#fff' }}
+            icon={<FaArrowCircleUp />}
+        /> */}
+        </VerticalTimeline>
+        
       </section>
   </div>;
 }

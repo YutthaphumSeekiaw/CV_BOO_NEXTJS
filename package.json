@@ -17,6 +17,7 @@
     "react-js-stickynav": "^1.0.2",
     "react-scroll": "^1.8.4",
     "react-typing-effect": "^2.0.5",
+    "react-vertical-timeline-component": "^3.5.2",
     "styled-components": "^5.3.3",
     "three": "^0.136.0",
     "vanta": "^0.5.21"

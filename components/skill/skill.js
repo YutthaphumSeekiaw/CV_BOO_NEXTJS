@@ -94,6 +94,10 @@ function Skills() {
               <h4>Server</h4>
               <p>                
               - iis<br></br>
+              - vercel<br></br>
+              - heroku<br></br>
+              - netlify<br></br>
+              - firebase<br></br>
               </p>
               <h4>Database</h4>
               <p>           
