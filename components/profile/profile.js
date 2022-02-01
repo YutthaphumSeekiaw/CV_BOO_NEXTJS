@@ -2,6 +2,10 @@ import React from 'react';
 import { useTranslation } from 'next-i18next'
 import {FaGithub,FaGitlab,FaLine} from 'react-icons/fa';
 
+// import CVDoc from '/CV.docx';
+
+
+
 function Profile() {
 
     const { t, i18n } = useTranslation();
@@ -64,6 +68,12 @@ function Profile() {
             .banner-text{
                 padding: 0 2rem;
             }
+            .banner-bg{
+                height: 730px;  
+            }
+            .banner-con{
+                height: 730px;  
+            }
         }
         
           `}
@@ -84,7 +94,7 @@ function Profile() {
                   <p>
                   {t('profile.email')}
                   </p>
-                  <a href='#' className='banner-btn'>{t('profile.btn')}</a>
+                  <a href='/CV.docx' download className='banner-btn'>{t('profile.btn')}</a>
                   <h1>
                     <a href='https://github.com/YutthaphumSeekiaw?tab=repositories'>
                     <FaGithub></FaGithub>
