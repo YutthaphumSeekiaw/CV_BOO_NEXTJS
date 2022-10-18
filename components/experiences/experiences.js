@@ -3,6 +3,8 @@ import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timel
 import 'react-vertical-timeline-component/style.min.css';
 import {FaArrowCircleUp} from 'react-icons/fa';
 
+// import { Timeline, Event } from "react-timeline-scribble";
+
 function Skills() {
   return <div className='containner' id="experiences">
       <style jsx>{
@@ -20,7 +22,19 @@ function Skills() {
             display: grid;
             grid-template-columns:repeat(1,1fr);
         }
-      
+        p{
+            color: #fff;
+        }
+        h3{
+            color: #fff;
+        }
+        h4{
+            color: #fff;
+        }
+        .css-692fgp{
+            color: #fff;
+        }
+
         
         @media screen and (max-width:480px) {
 
@@ -33,7 +47,21 @@ function Skills() {
       </div>
       <section className='content-con'>
 
-      <VerticalTimeline>
+     
+
+        {/* <div className='p'>           <Timeline>
+            <Event  interval={"May 2019 - present"} title={"<h3>Outsource at SCG</h3>"} subtitle={"Role: Developer"}>
+            <p> Design database domain, Design Flow, Development new features, Fixed bug application and Maintain application, Build and deploy application, Work with Scrum </p>
+            </Event>
+            <Event interval={"May 2018 - May 2019"} title={"Outsource at PTT Digital"} subtitle={"Role: Developer"}>
+            <p> Design database domain, Design Flow, Development new features, Fixed bug application and Maintain application, Build and deploy application, Work with Scrum </p>
+            </Event>
+            </Timeline>
+        </div>
+  */}
+
+
+       <VerticalTimeline>
         <VerticalTimelineElement
             className="vertical-timeline-element--work"
             contentStyle={{ background: 'rgb(8,5,31)', color: '#fff' }}
@@ -45,7 +73,11 @@ function Skills() {
             <h3 className="vertical-timeline-element-title">Outsource at SCG </h3>
             <h4 className="vertical-timeline-element-subtitle">Role: Developer</h4>
             <p>
-            Design database domain, Design Flow, Development new features, Fixed bug application and Maintain application, Build and deploy application, Work with Scrum 
+             •	Design database and design flow 
+            <br></br> •	Development new feature font-end, back-end and job schedule
+            <br></br> •	Fixed bug and maintain application
+            <br></br> •	Config github action CI/CD automate deploy to Azure
+            <br></br> •	Config server and build and deploy application to IIS and Azure
             </p>
         </VerticalTimelineElement>
         <VerticalTimelineElement
@@ -59,7 +91,10 @@ function Skills() {
             <h3 className="vertical-timeline-element-title">Outsource at PTT Digital</h3>
             <h4 className="vertical-timeline-element-subtitle">Role: Developer</h4>
             <p>
-            Design database domain, Design Flow, Development new features, Fixed bug application and Maintain application, Build and deploy application, Work with Scrum 
+             •	Design database and design flow 
+            <br></br> •	Development new feature font-end, back-end and job schedule
+            <br></br> •	Fixed bug and maintain application
+            <br></br> •	Config server and build and deploy application to IIS
             </p>
         </VerticalTimelineElement>
         <VerticalTimelineElement
@@ -73,7 +108,10 @@ function Skills() {
             <h3 className="vertical-timeline-element-title">Outsource at AYCAP Of Krungsri Bank</h3>
             <h4 className="vertical-timeline-element-subtitle">Role: Developer</h4>
             <p>
-             Development new features, Fixed bug application and Maintain application, Build and deploy application, Work with Scrum 
+             •	Design database and design flow 
+            <br></br> •	Development new feature font-end, back-end and job schedule
+            <br></br> •	Fixed bug and maintain application
+            <br></br> •	Config server and build and deploy application to IIS
             </p>
         </VerticalTimelineElement>
         <VerticalTimelineElement
@@ -87,7 +125,10 @@ function Skills() {
             <h3 className="vertical-timeline-element-title">Outsource at Chanwanich co,.ltd</h3>
             <h4 className="vertical-timeline-element-subtitle">Role: Developer</h4>
             <p>
-             Development new features, Fixed bug application and Maintain application, Build and deploy application, Work with Scrum 
+             •	Design database and design flow 
+            <br></br> •	Development new feature font-end, back-end and job schedule
+            <br></br> •	Fixed bug and maintain application
+            <br></br> •	Config server and build and deploy application to IIS
             </p>
         </VerticalTimelineElement>
         <VerticalTimelineElement
@@ -101,7 +142,9 @@ function Skills() {
             <h3 className="vertical-timeline-element-title">Outsource at AIG</h3>
             <h4 className="vertical-timeline-element-subtitle">Role: Developer</h4>
             <p>
-             Development new features, Fixed bug application and Maintain application, Build and deploy application 
+             •	Development new feature font-end, back-end and job schedule
+            <br></br> •	Fixed bug and maintain application
+            <br></br> •	Config server and build and deploy application to IIS
             </p>
         </VerticalTimelineElement>
         <VerticalTimelineElement
@@ -115,15 +158,15 @@ function Skills() {
             <h3 className="vertical-timeline-element-title">Bangkok Medical Software</h3>
             <h4 className="vertical-timeline-element-subtitle">Role: Programmer</h4>
             <p>
-             Development new features, Fixed bug application and Maintain application, Build and deploy application, Maintain Systems 
+             •	Get requiment by user
+            <br></br> •	Design database and design flow 
+            <br></br> •	Development new feature font-end and back-end
+            <br></br> •	Fixed bug and maintain application
+            <br></br> •	Config server and build and deploy application to IIS
+            <br></br> •	Maintain system in site
             </p>
         </VerticalTimelineElement>
-
-        {/* <VerticalTimelineElement
-            iconStyle={{ background: 'rgb(16, 204, 82)', color: '#fff' }}
-            icon={<FaArrowCircleUp />}
-        /> */}
-        </VerticalTimeline>
+        </VerticalTimeline> 
         
       </section>
   </div>;

@@ -78,16 +78,15 @@ function Skills() {
               <h4>Language</h4>
               <p>           
               - C#<br></br>
+              - javascript<br></br>
               </p>
               <h4>Framework</h4>
               <p>           
-              - .net<br></br>
               - .net core<br></br>
               </p>
               <h4>Source Control</h4>
               <p>           
               - git<br></br>
-              - svn<br></br>
               - github<br></br>
               - gitlab<br></br>
               </p>
@@ -96,13 +95,13 @@ function Skills() {
               - iis<br></br>
               - vercel<br></br>
               - heroku<br></br>
-              - netlify<br></br>
               - firebase<br></br>
               </p>
               <h4>Database</h4>
               <p>           
               - sql server<br></br>
               - oracle<br></br>
+              - Mongo<br></br>
               </p>
           </div>
       </section>
