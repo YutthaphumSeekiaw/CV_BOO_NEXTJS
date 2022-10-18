@@ -135,7 +135,7 @@ function Skills() {
             className="vertical-timeline-element--work"
             contentStyle={{ background: 'rgb(8,5,31)', color: '#fff' }}
             contentArrowStyle={{ borderRight: '7px solid  #fff' }}
-            date="January 2014 - November 2016"
+            date="January 2015 - November 2016"
             iconStyle={{ background: 'rgb(8,5,31)', color: '#fff' }}
             icon={<FaArrowCircleUp />}
         >
